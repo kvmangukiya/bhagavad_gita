@@ -56,25 +56,59 @@ class _BhagvatGeetaState extends State<BhagvatGeeta> {
                   SliverList(
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
-                        return Container(
-                          margin: const EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 2,
-                                color: Colors.black.withOpacity(0.1),
+                        return Padding(
+                          padding: const EdgeInsets.all(0.5),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(16),
+                            onTap: () {},
+                            child: Ink(
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                    width: 2,
+                                    color: Colors.black.withOpacity(0.1),
+                                  ),
+                                  color: Colors.brown.withOpacity(0.3),
+                                  borderRadius: BorderRadius.circular(16),
+                                  image: const DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          'assets/images/tilebkg.png'))),
+                              child: ListTile(
+                                leading: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 2,
+                                        color: Colors.black.withOpacity(0.1),
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              'assets/images/chapter/${index + 1}.png'))),
+                                ),
+                                title: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 35,
+                                      child: Text(
+                                        '${index + 1}',
+                                        style:
+                                            titleTSB(co: Colors.brown.shade800),
+                                      ),
+                                    ),
+                                    Text(
+                                      '${GeetaProvider.chaptersList[index]['name']}',
+                                      style:
+                                          titleTSB(co: Colors.brown.shade800),
+                                    ),
+                                  ],
+                                ),
+                                trailing:
+                                    const Icon(Icons.arrow_right_outlined),
                               ),
-                              borderRadius: BorderRadius.circular(16),
-                              image: const DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage('assets/images/tilebkg.png'))),
-                          child: ListTile(
-                            leading: const FlutterLogo(size: 30.0),
-                            title: Text(
-                              GeetaProvider.chaptersList[index]['name'],
-                              style: titleTSB(co: Colors.brown.shade800),
                             ),
-                            trailing: const Icon(Icons.arrow_right_outlined),
                           ),
                         );
                       },
