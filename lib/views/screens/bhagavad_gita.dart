@@ -1,27 +1,28 @@
 import 'package:bhagavad_gita/utils/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../controllers/geeta_provider.dart';
+import '../../controllers/gita_provider.dart';
 
-class BhagvatGeeta extends StatefulWidget {
-  const BhagvatGeeta({Key? key}) : super(key: key);
+class BhagavadGita extends StatefulWidget {
+  const BhagavadGita({Key? key}) : super(key: key);
 
   @override
-  State<BhagvatGeeta> createState() => _BhagvatGeetaState();
+  State<BhagavadGita> createState() => _BhagavadGitaState();
 }
 
-class _BhagvatGeetaState extends State<BhagvatGeeta> {
+class _BhagavadGitaState extends State<BhagavadGita> {
   @override
   initState() {
     super.initState();
-    Provider.of<GeetaProvider>(context, listen: false).chaptersJson();
+    Provider.of<GitaProvider>(context, listen: false).chaptersJson();
+    Provider.of<GitaProvider>(context, listen: false).verseJson();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<GeetaProvider>(
+    return Consumer<GitaProvider>(
       builder: (context, gp, child) => Scaffold(
-        body: GeetaProvider.chaptersList.isEmpty
+        body: GitaProvider.chaptersList.isEmpty
             ? const Center(child: CircularProgressIndicator())
             : CustomScrollView(
                 slivers: <Widget>[
@@ -43,14 +44,16 @@ class _BhagvatGeetaState extends State<BhagvatGeeta> {
                       ),
                     ),
                     leading: IconButton(
-                      icon: const Icon(Icons.menu),
                       onPressed: () {},
+                      icon: const Icon(Icons.menu),
                     ),
-                    actions: const [
-                      Icon(1 == 0
-                          ? Icons.light_mode_rounded
-                          : Icons.dark_mode_rounded),
-                      SizedBox(width: 16),
+                    actions: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon((1 == 0)
+                              ? Icons.light_mode_rounded
+                              : Icons.dark_mode_rounded)),
+                      const SizedBox(width: 16),
                     ],
                   ),
                   SliverList(
@@ -60,12 +63,15 @@ class _BhagvatGeetaState extends State<BhagvatGeeta> {
                           padding: const EdgeInsets.all(0.5),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(16),
-                            onTap: () {},
+                            onTap: () {
+                              GitaProvider.selChapter = index;
+                              Navigator.of(context).pushNamed('chapter_screen');
+                            },
                             child: Ink(
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     width: 2,
-                                    color: Colors.black.withOpacity(0.1),
+                                    color: Colors.brown.withOpacity(0.1),
                                   ),
                                   color: Colors.brown.withOpacity(0.3),
                                   borderRadius: BorderRadius.circular(16),
@@ -80,7 +86,7 @@ class _BhagvatGeetaState extends State<BhagvatGeeta> {
                                   decoration: BoxDecoration(
                                       border: Border.all(
                                         width: 2,
-                                        color: Colors.black.withOpacity(0.1),
+                                        color: Colors.brown.withOpacity(0.1),
                                       ),
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
@@ -99,7 +105,7 @@ class _BhagvatGeetaState extends State<BhagvatGeeta> {
                                       ),
                                     ),
                                     Text(
-                                      '${GeetaProvider.chaptersList[index]['name']}',
+                                      GitaProvider.chaptersList[index]['name'],
                                       style:
                                           titleTSB(co: Colors.brown.shade800),
                                     ),
