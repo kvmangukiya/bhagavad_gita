@@ -16,6 +16,8 @@ class _BhagavadGitaState extends State<BhagavadGita> {
     super.initState();
     Provider.of<GitaProvider>(context, listen: false).chaptersJson();
     Provider.of<GitaProvider>(context, listen: false).verseJson();
+    Provider.of<GitaProvider>(context, listen: false).verseTranslationJson();
+    Provider.of<GitaProvider>(context, listen: false).commentaryJson();
   }
 
   @override

@@ -74,6 +74,7 @@ class ChapterScreen extends StatelessWidget {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(16),
                         onTap: () {
+                          GitaProvider.selVerse = e['verse_order'];
                           Navigator.of(context).pushNamed('verse_details');
                         },
                         child: Ink(
@@ -95,6 +96,13 @@ class ChapterScreen extends StatelessWidget {
                               e['text'],
                               style:
                                   titleTSB(fs: 17, co: Colors.brown.shade800),
+                            ),
+                            subtitle: Text(
+                              GitaProvider
+                                      .vTranslationList[e['verse_order'] - 1]
+                                  ['description'],
+                              style:
+                                  titleTSB(fs: 17, co: Colors.brown.shade600),
                             ),
                             trailing: const Icon(Icons.arrow_right_outlined),
                           ),
