@@ -1,14 +1,14 @@
 # Bhagavad Gita (Departure)
 
-https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/28803657-046b-4e67-adfc-24238865514d
+https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/af6eb98e-d098-473e-a27e-83a835077a87
 
 
 ## Project Description:
 
 
-    "Bhagavad Gita (Departure)" is a mobile application aimed at providing a comprehensive and user-friendly platform for studying and exploring the teachings of Bhagvat Geeta. Built using Flutter, the app incorporates various concepts such as local JSON bank and Shared Preferences to enhance the user experience. It offers a range of functionalities designed to facilitate easy navigation, customization, and accessibility for users.
+'Bhagavad Gita (Departure)' is a mobile application aimed at providing a comprehensive and user-friendly platform for studying and exploring the teachings of Bhagvat Geeta. Built using Flutter, the app incorporates various concepts such as local JSON bank and Shared Preferences to enhance the user experience. It offers a range of functionalities designed to facilitate easy navigation, customization, and accessibility for users.
     
-    The "Bhagavad Gita (Departure)" app aims to create an immersive and personalized experience for users seeking spiritual guidance through the teachings of the Bhagvat Geeta. By incorporating local JSON storage, Shared Preferences, like functionality, themes, chapter images, splash screens, detailed verse screens, and multi-language support, the app offers a comprehensive solution for users to explore and engage with this sacred text.
+The 'Bhagavad Gita (Departure)' app aims to create an immersive and personalized experience for users seeking spiritual guidance through the teachings of the Bhagvat Geeta. By incorporating local JSON storage, Shared Preferences, like functionality, themes, chapter images, splash screens, detailed verse screens, and multi-language support, the app offers a comprehensive solution for users to explore and engage with this sacred text.
 
 
 ## Project Objectives:
