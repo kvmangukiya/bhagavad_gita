@@ -1,5 +1,6 @@
 import 'package:bhagavad_gita/controllers/theme_provider.dart';
 import 'package:bhagavad_gita/views/screens/bhagavad_gita.dart';
+import 'package:bhagavad_gita/views/screens/bookmark_screen.dart';
 import 'package:bhagavad_gita/views/screens/chapter_screen.dart';
 import 'package:bhagavad_gita/views/screens/splash_screen.dart';
 import 'package:bhagavad_gita/views/screens/verse_details.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
           "bhagavad_gita": (context) => const BhagavadGita(),
           "chapter_screen": (context) => const ChapterScreen(),
           "verse_details": (context) => const VerseDetails(),
+          "bookmark_screen": (context) => const BookMarkScreen(),
         });
   }
 }

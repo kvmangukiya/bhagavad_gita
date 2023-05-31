@@ -28,6 +28,12 @@ class ChapterScreen extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
+                Navigator.of(context).pushNamed('bookmark_screen');
+              },
+              icon: const Icon(Icons.bookmark),
+            ),
+            IconButton(
+              onPressed: () {
                 themeProvider.setDarkTheme(!themeProvider.isDark);
               },
               icon: Icon(themeProvider.isDark

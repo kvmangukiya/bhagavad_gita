@@ -46,8 +46,10 @@ class _BhagavadGitaState extends State<BhagavadGita> {
                         ),
                       ),
                       leading: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.menu),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('bookmark_screen');
+                        },
+                        icon: const Icon(Icons.bookmark),
                       ),
                       actions: [
                         Consumer<ThemeProvider>(

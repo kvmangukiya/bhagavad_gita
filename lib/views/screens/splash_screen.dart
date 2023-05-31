@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:bhagavad_gita/utils/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../controllers/gita_provider.dart';
@@ -22,10 +21,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Provider.of<GitaProvider>(context, listen: false).chaptersJson();
-    Provider.of<GitaProvider>(context, listen: false).verseJson();
-    Provider.of<GitaProvider>(context, listen: false).verseTranslationJson();
-    Provider.of<GitaProvider>(context, listen: false).commentaryJson();
+    Provider.of<GitaProvider>(context, listen: false)
+      ..chaptersJson()
+      ..verseJson()
+      ..verseTranslationJson()
+      ..commentaryJson()
+      ..getBookMark();
 
     return Scaffold(
       body: Center(
@@ -36,18 +37,26 @@ class _SplashScreenState extends State<SplashScreen> {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage('assets/images/splashbkg.png'),
-                  opacity: 0.8)),
+                  opacity: 1)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 300),
               const CircularProgressIndicator(color: Colors.white),
               Text("Bhagavad Gita",
-                  style: titleTSB(fs: 14, co: Colors.white),
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.brown.shade900,
+                      backgroundColor: Colors.white.withOpacity(0.4)),
                   textScaleFactor: 2),
               Text(
                 "Made with love 💕 in India",
-                style: titleTSB(co: Colors.white),
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.brown.shade900,
+                    backgroundColor: Colors.white.withOpacity(0.4)),
               )
             ],
           ),

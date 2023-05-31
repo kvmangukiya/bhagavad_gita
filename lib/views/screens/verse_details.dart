@@ -26,6 +26,20 @@ class VerseDetails extends StatelessWidget {
             icon: const Icon(Icons.arrow_back_ios_new_rounded),
           ),
           actions: [
+            Consumer<GitaProvider>(
+              builder: (context, gp, child) => IconButton(
+                onPressed: () {
+                  GitaProvider.verseBookMark
+                          .contains(GitaProvider.selVerse.toString())
+                      ? gp.removeBookMark(GitaProvider.selVerse)
+                      : gp.addBookMark(GitaProvider.selVerse);
+                },
+                icon: Icon(GitaProvider.verseBookMark
+                        .contains(GitaProvider.selVerse.toString())
+                    ? Icons.bookmark_remove
+                    : Icons.bookmark_add),
+              ),
+            ),
             IconButton(
               onPressed: () {
                 themeProvider.setDarkTheme(!themeProvider.isDark);
