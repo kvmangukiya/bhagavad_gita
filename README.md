@@ -1,6 +1,6 @@
 # Bhagavad Gita (Departure)
 
-https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/28803657-046b-4e67-adfc-24238865514d
+https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/af6eb98e-d098-473e-a27e-83a835077a87
 
 
 ## Project Description:
