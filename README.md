@@ -41,3 +41,17 @@ teachings.
 - Experience with mobile app development and related tools like Android Studio or VS Code.
 - Ability to work independently.
 
+## Screenshots:
+
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/c16a412e-295d-40be-841c-ebbbc422ed33" alt="01" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/ea2abe27-9d3c-4cb8-bef9-1490ac12a316" alt="02" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/ee5da22f-9078-431f-a406-af86ee1da7ed" alt="03" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/d1f7978f-a8aa-4d4f-8b1f-5f466d698b91" alt="04" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/5588db57-3e58-49d2-954d-40fe72c572ee" alt="05" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/5f6909c0-c323-49fd-8d20-c0d1456d456a" alt="06" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/9ae9f7cf-9730-42d2-a922-4cc893dd8f02" alt="07" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/ef76f84e-7508-47e5-a7b9-dc3d178da9ad" alt="08" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/f5a0e56c-b562-46e7-a6bb-36c5dbe14cab" alt="09" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/dd4a1cd7-5cb6-4f36-bc7e-32696957010f" alt="10" width="224" height="500"></img>
+<img src="https://github.com/kvmangukiya/bhagavad_gita/assets/130810865/2dd797f4-5a9d-4bfc-bba5-948f86e859cd" alt="11" width="224" height="500"></img>
+
