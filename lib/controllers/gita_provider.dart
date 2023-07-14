@@ -82,10 +82,4 @@ class GitaProvider extends ChangeNotifier {
     final SharedPreferences prefs = await _prefs;
     await prefs.setStringList(key, value);
   }
-
-  // // delete particular preference
-  // Future<void> _deleteStringList(String key) async {
-  //   final SharedPreferences prefs = await _prefs;
-  //   await prefs.remove(key);
-  // }
 }
